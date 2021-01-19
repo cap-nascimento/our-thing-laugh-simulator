@@ -1,0 +1,21 @@
+{% extends 'simulator/base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="centered">
+                <img class="img-responsive our_thing_title" src="{% static 'img/our_thing.png' %}" alt="our_thing">
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4 centered">emoji</div>
+                <div class="col-md-4 centered">
+                    <button class="btn btn-warning">Start</button>
+                </div>
+                <div class="col-md-4 centered">logo guarana</div>
+        </div>
+    </div>
+
+{% endblock %}
