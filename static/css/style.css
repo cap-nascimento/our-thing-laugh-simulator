@@ -2,11 +2,52 @@ body {
     background-color: #278402;
 }
 
+.site-title {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.start-button {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    transition: transform .1s;
+}
+
+.start-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
 .centered {
     margin-top: 50px;
     text-align: center;
 }
 
-.our_thing_title {
-    width: 70%;
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.twinkle-item {
+    margin-top: 30px;
+    text-align: center;
+    animation-name: twinkle;
+    animation-duration: 2s;
+    animation-direction: forward;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .twinkle-item {
+        display: none;
+    }
 }

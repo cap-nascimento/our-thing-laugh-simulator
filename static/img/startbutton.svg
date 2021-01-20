@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="322" height="130" viewBox="0 0 322 130">
+  <g id="Rectangle_1" data-name="Rectangle 1" fill="#fe0" stroke="#fff" stroke-width="11">
+    <rect width="322" height="130" rx="65" stroke="none"/>
+    <rect x="5.5" y="5.5" width="311" height="119" rx="59.5" fill="none"/>
+  </g>
+  <text id="start" transform="translate(157 97.5)" font-size="80" font-family="Impact"><tspan x="-78.398" y="0">start</tspan></text>
+</svg>
