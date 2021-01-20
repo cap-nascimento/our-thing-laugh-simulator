@@ -3,22 +3,17 @@
 
 {% block body %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 centered">
-                <img class="site-title" src="{% static 'img/our_thing.png' %}" alt="our_thing">
-            </div>
+    <div class="row">
+        <div class="col-md-4 twinkle-item">
+            <img src="{% static 'img/laugh_emoji.png' %}" alt="laugh_emoji">
         </div>
-        <div class="row">
-            <div class="col-md-4 twinkle-item">
-                <img src="{% static 'img/laugh_emoji.png' %}" alt="laugh_emoji">
-            </div>
-            <div class="col-md-4 centered">
+        <div class="col-md-4 centered">
+            <a href="{% url 'laughs' %}">
                 <img class="start-button" src="{% static 'img/startbutton.svg' %}" alt="startbutton">
-            </div>
-            <div class="col-md-4 twinkle-item">
-                <img src="{% static 'img/guarana_logo.png' %}" alt="guarana_logo">
-            </div>
+            </a>
+        </div>
+        <div class="col-md-4 twinkle-item">
+            <img src="{% static 'img/guarana_logo.png' %}" alt="guarana_logo">
         </div>
     </div>
 

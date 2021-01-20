@@ -1,0 +1,51 @@
+{% extends 'simulator/base.html' %}
+{% load static %}
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-3 coisa-nosser-list">
+            <h2>Coisa Nossers</h2>
+            {% for nosser in nossers %}
+                <div>
+                    <button class="coisa-nosser-badge">{{ nosser }}</button>
+                </div>
+                {% if forloop.counter == nossers|length %}
+                    <div>
+                        <button class="coisa-nosser-badge">Add</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="col-md-9 coisa-nosser-list">    
+            <h2>Laugh Database</h2>
+            {% for audio in audios %}
+                {% if audio|divisibleby:3 %}
+                    {% if audio != 0 %}
+                        </div>
+                    {% endif %}
+                    <div class="row">
+                {% endif %}
+                <div class="col-md-4">
+                    <img src="{% static 'img/audio_icon.png' %}" alt= "audio_icon" class="audio-player-icon">
+                    <h4 class="audio-num">{{ audio }}</h4>
+                </div>
+                {% if forloop.counter == audios|length %}
+                    {% if audios|length|divisibleby:3 %}
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="{% static 'img/audio_icon.png' %}" alt= "audio_icon" class="audio-player-icon">
+                                <h4 class="audio-num">+</h4>
+                            </div>
+                        </div>
+                    {% else %}
+                            <div class="col-md-4">
+                                <img src="{% static 'img/audio_icon.png' %}" alt= "audio_icon" class="audio-player-icon">
+                                <h4 class="audio-num">Add</h4>
+                            </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

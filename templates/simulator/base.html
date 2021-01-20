@@ -19,7 +19,14 @@
     <title>Coisa Nossa Laugh Simulator</title>
 </head>
 <body>
-    {% block body %}
-    {% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 centered">
+                <img class="site-title" src="{% static 'img/our_thing.png' %}" alt="our_thing">
+            </div>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </div>
 </body>
 </html>
